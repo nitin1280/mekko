@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Pricing tables -->
+        <div class="pricing-table">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Demo Plan</h5>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Select Plan</button>
+                </div>
+            </div>
+            <!-- Add more pricing cards as needed -->
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Form for order details -->
+                        <form id="orderForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="comments">Order Comments</label>
+                                <textarea class="form-control" id="comments" rows="3"
+                                    placeholder="Enter your comments"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="Submit" onclick= "submitOrder()">Submit Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- User slider -->
+        <div class="pricing-table">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Plan 1</h5>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                        onclick="highlightPlan(0)">Select Plan</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Plan 2</h5>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                        onclick="highlightPlan(1)">Select Plan</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Plan 3</h5>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                        onclick="highlightPlan(2)">Select Plan</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <!-- Modal content as before -->
+        </div>
+
+        <!-- User slider -->
+        <input type="range" id="userSlider" min="0" max="100" step="10" value="0" oninput="highlightPlanFromSlider()">
+        <div id="highlightedPlan"></div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

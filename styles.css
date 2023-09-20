@@ -1,0 +1,55 @@
+/* Add your custom styles here */
+/* For highlighting plan based on slider value */
+#highlightedPlan {
+    width: 100%;
+    height: 20px;
+    background-color: #007BFF;
+    margin-top: 20px;
+}
+
+/* For spacing */
+.pricing-table {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
